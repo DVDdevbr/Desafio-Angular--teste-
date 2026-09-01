@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+:host {
+  background-image: url('/img/Fundo-login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Cartão */
+.cartao-login {
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 40px 30px;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Lado Esquerdo: Carro */
+.lado-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagem-carro {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Lado Direito: Formulário */
+.lado-formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.logo img {
+  width: 110px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #002c6c; 
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 280px;
+}
+
+.campo-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 9px 12px;
+  margin-bottom: 15px;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.campo-input:focus-within {
+  border-color: #004aba;
+}
+
+.campo-input .icone {
+  margin-right: 10px;
+  font-size: 14px;
+  user-select: none;
+}
+
+.campo-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  background: transparent;
+}
+
+.opcao-lembrar {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 18px;
+}
+
+.opcao-lembrar label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.opcao-lembrar input {
+  cursor: pointer;
+}
+
+.botao-entrar {
+  width: 100%;
+  padding: 11px;
+  background-color: #004aba;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.botao-entrar:hover {
+  background-color: #002c6c;
+}
+
+.botao-entrar:active {
+  transform: scale(0.98);
+}
+
+/* Responsividade Mobile */
+@media (max-width: 768px) {
+  .cartao-login {
+    flex-direction: column-reverse;
+    padding: 25px 20px;
+  }
+
+  .imagem-carro {
+    max-width: 260px;
+  }
+}

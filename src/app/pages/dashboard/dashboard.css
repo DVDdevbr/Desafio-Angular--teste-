@@ -1,0 +1,150 @@
+/* Geral */
+:host {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/img/Fundo-login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* --- DASHBOARD --- */
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.dashboard h1 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+/* Cartões */
+.cartoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.cartao {
+  width: 165px;
+  height: 115px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d8d8d8;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartao h2 {
+  font-size: 13px;
+  color: #333333;
+  margin: 0 0 10px;
+}
+
+.cartao strong {
+  font-size: 28px;
+  color: #0071ce;
+}
+
+.cartao span {
+  font-size: 11px;
+  color: #666666;
+}
+
+.veiculo select {
+  width: 130px;
+  padding: 6px;
+  border: 1px solid #0071ce;
+  border-radius: 3px;
+  color: #0071ce;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+/* Imagem do Veículo */
+.veiculo-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.veiculo-imagem img {
+  width: 600px;
+  max-width: 80%;
+  height: auto;
+}
+
+/* Rodapé de Informações */
+.informacoes {
+  width: 100%;
+  min-height: 85px;
+  background-color: #003478;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+}
+
+.informacoes div {
+  min-width: 100px;
+}
+
+.informacoes h3 {
+  font-size: 12px;
+  margin: 0 0 14px;
+}
+
+.informacoes p {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.informacoes input {
+  width: 150px;
+  height: 22px;
+  border: none;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+  .cabecalho {
+    padding: 20px;
+  }
+
+  .cartoes {
+    gap: 10px;
+    padding: 0 10px;
+  }
+
+  .cartao {
+    width: 150px;
+  }
+
+  .veiculo-imagem img {
+    width: 400px;
+  }
+
+  .informacoes {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

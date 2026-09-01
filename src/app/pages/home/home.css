@@ -1,0 +1,65 @@
+/* Geral */
+:host {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('/img/Fundo-login.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* --- CARTÃO --- */
+.conteudo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartao-boas-vindas {
+  background-color: rgba(255, 255, 255, 0.516);
+  padding: 30px 40px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 420px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.cartao-boas-vindas h1 {
+  color: #002b6cd6;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.cartao-boas-vindas p {
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.imagem-ranger {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.botao-dashboard {
+  display: block;
+  background-color: #004ababa;
+  color: #ffffff;
+  padding: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.botao-dashboard:hover {
+  background-color: #0f2341;
+}

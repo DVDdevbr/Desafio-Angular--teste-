@@ -1,0 +1,157 @@
+/* Cabecalho */
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  position: relative;
+  z-index: 5;
+}
+
+/* --- BOTÃO HAMBÚRGUER --- */
+.menu-check {
+  display: none;
+}
+
+.icone-hamburguer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.linha {
+  height: 4px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* --- MENU LATERAL (HAMBÚRGUER )--- */
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 250px;
+  height: 100%;
+  background-color: #1b365d;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+  transition: left 0.3s ease;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo-menu {
+  height: 40px;
+}
+
+.botao-fechar {
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.menu-opcoes {
+  list-style: none;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.menu-opcoes li a {
+  display: block;
+  padding: 15px 25px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.menu-opcoes li a:hover {
+  background-color: #0f2341;
+}
+
+/* Menu aberto*/
+.menu-check:checked ~ .menu-lateral {
+  left: 0;
+}
+
+.fundo-escuro {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 15;
+}
+
+.menu-check:checked ~ .fundo-escuro {
+  display: block;
+}
+
+/* --- ÍCONE DE CONTA (SAIR) --- */
+.container-conta {
+  position: relative;
+}
+
+.conta-check {
+  display: none;
+}
+
+.icone-conta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.icone-conta:hover {
+  opacity: 0.8;
+}
+
+.dropdown-conta {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  min-width: 130px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.opcao-logout {
+  display: block;
+  padding: 10px 15px;
+  color: #ff0800d2;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.opcao-logout:hover {
+  background-color: #fcd6d9;
+}
+
+/* Clicando no ícone de conta */
+.conta-check:checked ~ .dropdown-conta {
+  display: block;
+}
