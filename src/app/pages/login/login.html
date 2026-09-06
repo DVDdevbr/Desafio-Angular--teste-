@@ -11,13 +11,13 @@
       <h2>Boas-vindas</h2>
 
       <!-- Icones -->
-      <form class="formulario">
+      <form (ngSubmit)="login()" class="formulario">
         <div class="campo-input">
-          <span class="icone">👤</span><input type="text" placeholder="Nome de usuário" required>
+          <span class="icone">👤</span><input type="text" placeholder="Nome de usuário" required [(ngModel)]="usuario.nome" name="nome">
         </div>
 
         <div class="campo-input">
-          <span class="icone">🔒</span><input type="password" placeholder="Senha" required>
+          <span class="icone">🔒</span><input type="password" placeholder="Senha" required [(ngModel)]="usuario.senha" name="senha">
         </div>
 
         <!-- Botão lembrar -->
