@@ -13,6 +13,6 @@ export class Auth {
   constructor(private http:HttpClient){}
 
   login(usuario: Pick<Usuario, 'nome'|'senha'>):Observable<Usuario>{
-    return this.http.post<Usuario>(`${this.apiUrl}/login`,usuario);
+    return this.http.post<Usuario>(`${this.apiUrl}login`,usuario);
   }
 }
