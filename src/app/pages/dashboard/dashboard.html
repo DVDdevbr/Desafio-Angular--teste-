@@ -11,35 +11,41 @@
         <h2>Veículo</h2>
 
         <!-- Seleção de carros -->
-        <select>
-          <option value="mustang">Mustang</option>
-          <option value="BroncoSport">Bronco Sport</option>
-          <option value="territory">Territory</option>
+        <select (change)="veiculoSelecionado($event)">
+          <option value="">Selecione um veículo</option>
+
+          @for (veiculo of vehicles; track veiculo.id) {
+            <option [value]="veiculo.id">{{ veiculo.vehicle }}</option>
+          }
         </select>
       </div>
 
       <!-- Cartão dos veículos -->
       <div class="cartao">
         <h2>Total de Vendas</h2>
-        <strong>1500</strong>
+        <strong>{{ selecionado?.volumetotal }}</strong>
         <span>unid.</span>
       </div>
 
       <div class="cartao">
         <h2>Conectados</h2>
-        <strong>500</strong>
+        <strong>{{ selecionado?.connected }}</strong>
         <span>unid.</span>
       </div>
 
       <div class="cartao">
         <h2>Update Software</h2>
-        <strong>750</strong>
+        <strong>{{ selecionado?.softwareUpdates }}</strong>
         <span>unid.</span>
       </div>
     </section>
 
     <!-- Imagem do veículo -->
-    <section class="veiculo-imagem"><img src="img/mustang.png" alt="Ford Mustang"></section>
+    <section class="veiculo-imagem">
+      @if (selecionado) {
+        <img [src]="selecionado.img" [alt]="selecionado.vehicle">
+      }
+    </section>
 
     <!-- Informações do veículo -->
     <section class="informacoes">

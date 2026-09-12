@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Menu } from "../../componentes/menu/menu";
 import { Veiculo } from '../../models/veiculo.model';
 import { Vehicle } from '../../services/vehicle';
@@ -9,12 +9,24 @@ import { Vehicle } from '../../services/vehicle';
   templateUrl: './dashboard.html',
   styleUrl: './dashboard.css',
 })
-export class Dashboard {
+export class Dashboard implements OnInit {
 
   vehicles: Veiculo[] = [];
   selecionado: Veiculo | null = null;
 
   constructor(private vehicle:Vehicle){}
+  ngOnInit(): void {
+
+  this.vehicle.getVeiculos().subscribe({
+    next: (response) => {
+      this.vehicles = response.vehicles;
+      console.log(this.vehicles);
+    },
+    error: (erro) => {
+      console.error('Erro ao buscar veículos', erro);
+    }
+  });
+}
 
   veiculoSelecionado(event:Event):void{
 

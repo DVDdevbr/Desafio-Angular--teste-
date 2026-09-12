@@ -8,12 +8,18 @@ import { VeiculosAPI } from '../models/veiculo.model';
 })
 export class Vehicle {
 
-  private apiUrl = "http://localhost:3001/";
+  private apiUrl = "http://localhost:3001";
 
   constructor(private http:HttpClient){}
 
   getVeiculos(): Observable<VeiculosAPI>{
     return this.http.get<VeiculosAPI>(`${this.apiUrl}/vehicles`)
   }
+
+  getDadosVeiculo(vin: string): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/vehicleData`, {
+    vin:vin
+  });
+}
   
 }
