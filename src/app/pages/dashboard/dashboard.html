@@ -50,34 +50,38 @@
     <!-- Informações do veículo -->
     <section class="informacoes">
 
-      <div>
-        <h3>Código - Vin:</h3>
-        <input type="text" placeholder="Digite o codigo...">
+      <div> 
+        <h3>Código - Vin:</h3> 
+        <input 
+          type="text" 
+          placeholder="Digite o codigo..."
+          [(ngModel)]="vin"
+          (keyup.enter)="buscarDadosVeiculo()"> 
       </div>
 
       <div>
         <h3>Odômetro:</h3>
-        <p>9000 Km</p>
+        <p>{{ dadosVeiculo?.odometro }}</p>
       </div>
 
       <div>
         <h3>Nível de Combustível:</h3>
-        <p>98 %</p>
+        <p>{{ dadosVeiculo?.nivelCombustivel }}%</p>
       </div>
 
       <div>
         <h3>Status:</h3>
-        <p>on</p>
+        <p>{{ dadosVeiculo?.status }}</p>
       </div>
 
       <div>
         <h3>Lat:</h3>
-        <p>-12.2922</p>
+        <p>{{ dadosVeiculo?.lat }}</p>
       </div>
 
       <div>
         <h3>Long:</h3>
-        <p>-38.2914</p>
+        <p>{{ dadosVeiculo?.long }}</p>
       </div>
     </section>
   </main>
