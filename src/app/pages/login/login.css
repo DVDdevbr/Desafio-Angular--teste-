@@ -1,16 +1,9 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 :host {
   background-image: url('/img/Fundo-login.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +35,7 @@
   max-width: 380px;
   height: auto;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 /* Lado Direito: Formulário */

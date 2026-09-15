@@ -1,16 +1,12 @@
 /* Geral */
 :host {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
   background-image: url('/img/Fundo-login.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 /* --- DASHBOARD --- */
@@ -86,6 +82,7 @@
   width: 600px;
   max-width: 80%;
   height: auto;
+  mix-blend-mode: multiply;
 }
 
 /* Rodapé de Informações */
@@ -126,10 +123,6 @@
 
 /* Responsividade mobile */
 @media (max-width: 768px) {
-  .cabecalho {
-    padding: 20px;
-  }
-
   .cartoes {
     gap: 10px;
     padding: 0 10px;
